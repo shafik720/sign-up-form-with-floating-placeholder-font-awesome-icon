@@ -1,0 +1,76 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#dd0b12, #FF5FC5);
+}
+
+.container{
+    background: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #3C5644;
+}
+.container h2{
+    padding-left: 25px;
+    border-left: 5px solid #C90000;
+    margin-bottom: 35px;
+}
+
+.container .inputField{
+    width: 400px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.container .inputField input{
+    width: 100%;
+    padding: 10px 45px;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.container .inputField span{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+    padding: 10px;
+    pointer-events: none;
+    color: grey;
+    transition: 0.5s;
+}
+
+.container .inputField .inputText{
+    margin-left: 25px;
+}
+.container .inputField .fontAwesome{
+    margin-top: 2px;
+    z-index: 10;
+}
+.container .inputField input:focus ~ .inputText,
+.container .inputField input:valid ~ .inputText{
+    color: #0083D0;
+    transform: translateX(-25px) translateY(-10px);
+    font-size: 17px;
+    padding: 0px;
+    background: white;
+}
+.container .inputField input:focus ~ .fontAwesome,
+.container .inputField input:valid ~ .fontAwesome{
+    color: #FA161D ;
+}
+.container .inputField input[type='submit']{
+    border: none;
+    background: linear-gradient(45deg,#103F91,#22A5F1);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.container .inputField input[type='submit']:hover{
+    background: linear-gradient(45deg,#dd0b12, #FF5FC5);
+}
